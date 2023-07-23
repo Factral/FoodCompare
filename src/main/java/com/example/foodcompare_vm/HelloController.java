@@ -42,19 +42,20 @@ public class HelloController implements Initializable {
         Food food = new Food();
         food.setName("Big Mac");
         food.setPrice("10000");
-        food.setImageSrc("com/example/img/big_mac.jpeg");
+        food.setImageSrc("/img/big_mac.jpeg");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
+
 
         food = new Food();
         food.setName("Cuarto  de \n Libra");
         food.setPrice("10000");
-        food.setImageSrc("com/example/img/cuarto_libra.png");
+        food.setImageSrc("com/example/img/home.png");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
 
 
-        /**
+
         food = new Food();
         food.setName("Whopper");
         food.setPrice("11000");
@@ -147,7 +148,7 @@ public class HelloController implements Initializable {
         food.setRestaurant("Taco Bell");
         ls.add(food);
 
- **/
+
         return ls;
     }
 }

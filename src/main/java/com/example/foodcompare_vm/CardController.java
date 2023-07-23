@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 
+import java.io.File;
+
 public class CardController {
 
     @FXML
@@ -28,7 +30,7 @@ public class CardController {
 
     private String [] colors = {"#ECA702", "#FFF"};
     public void setData(Food food ){
-        Image image = new Image(getClass().getResourceAsStream(food.getImageSrc()));
+        Image image = new Image(new File(food.getImageSrc()).toURI().toString());
         foodImage.setImage(image);
         foodName.setText(food.getName());
         restaurant.setText(food.getRestaurant());

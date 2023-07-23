@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="box" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="106.0" prefWidth="180.0" spacing="5.0" style="-fx-background-color: ffff; -fx-border-color: F11111;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.CardController">
+<HBox fx:id="box" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="106.0" prefWidth="150.0" spacing="5.0" style="-fx-background-color: ffff; -fx-border-color: F11111;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.HelloController">
    <children>
       <ImageView fx:id="foodImage" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/big_mac.jpeg" />
+            <Image url="@../../../../resources/com/example/img/big_mac.jpeg" />
          </image>
       </ImageView>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
@@ -34,7 +34,7 @@
             </Label>
             <ImageView fitHeight="32.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/five_stars.png" />
+                  <Image url="@../../../../resources/com/example/img/five_stars.png" />
                </image>
             </ImageView>
          </children>
