@@ -7,12 +7,12 @@ public class Restaurant {
 
     private String id;
     private String name;
-    private int phonenumber;
+    private String phonenumber;
     private String adress;
     ArrayList<Item> items=new ArrayList<Item>();
     ArrayList<Platform> platforms=new ArrayList<Platform>();
 
-    public Restaurant(String id, String name, Integer phonenumber, String adress){
+    public Restaurant(String id, String name, String phonenumber, String adress){
         this.id = id;
         this.name = name;
         this.phonenumber=phonenumber;
