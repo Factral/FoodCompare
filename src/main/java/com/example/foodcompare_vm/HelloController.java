@@ -14,9 +14,8 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
 
-
     @FXML
-    private HBox cardLayout;
+    private HBox CardLayout;
     private List<Food> recentlyAdded;
 
     @Override
@@ -29,12 +28,12 @@ public class HelloController implements Initializable {
             HBox cardBox = fxmlLoader.load();
             CardController cardController = fxmlLoader.getController();
             cardController.setData(recentlyAdded.get(i));
-            cardLayout.getChildren().add(cardBox);
+            CardLayout.getChildren().add(cardBox);
 
             }
         }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -44,17 +43,19 @@ public class HelloController implements Initializable {
         Food food = new Food();
         food.setName("Big Mac");
         food.setPrice("10000");
-        food.setImageSrc("/img/big_mac.jpg");
+        food.setImageSrc("com/example/img/big_mac.jpeg");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
 
         food = new Food();
         food.setName("Cuarto  de \n Libra");
         food.setPrice("10000");
-        food.setImageSrc("/img/cuarto_libra.png");
+        food.setImageSrc("com/example/img/cuarto_libra.png");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
 
+
+        /**
         food = new Food();
         food.setName("Whopper");
         food.setPrice("11000");
@@ -146,6 +147,8 @@ public class HelloController implements Initializable {
         food.setImageSrc("/img/bc_topfries");
         food.setRestaurant("Taco Bell");
         ls.add(food);
+
+ **/
         return ls;
     }
 }
