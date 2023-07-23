@@ -7,9 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import org.bson.Document;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class HelloApplication extends Application {
