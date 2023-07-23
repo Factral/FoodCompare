@@ -1,15 +1,19 @@
 package com.example.foodcompare_vm;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.HBox;
 
-public class HelloController {
-    @FXML
-    private Label welcomeText;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable {
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Hola");
+    private HBox CardLayout;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
-
 }
