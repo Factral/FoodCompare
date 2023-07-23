@@ -1,5 +1,6 @@
 package com.example.foodcompare_vm;
 
+import com.mongodb.client.MongoCollection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,21 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        //conect to database
+        CConnection cConnection = new CConnection();
+        cConnection.connect();
+
+        //get collection
+        MongoCollection collection = cConnection.getCollection("compras");
+        System.out.println(collection);
+
+        //get all elements from collection
+        for (Object document : collection.find()) {
+            System.out.println(document);
+        }
+
+
         // Cargar el archivo FXML
         Parent root = FXMLLoader.load(getClass().getResource("Menú_Pp.fxml"));
 
