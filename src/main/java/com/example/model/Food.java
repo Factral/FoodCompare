@@ -4,7 +4,7 @@ public class Food {
     private String name;
     private String ImageSrc;
     private String restaurant;
-    private int price;
+    private String price;
 
     public String getName() {
         return name;
@@ -30,11 +30,11 @@ public class Food {
         this.restaurant = restaurant;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }

@@ -9,35 +9,35 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Button mnemonicParsing="false" prefHeight="106.0" prefWidth="150.0" style="-fx-background-color: fffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Button fx:id="box" mnemonicParsing="false" prefHeight="106.0" prefWidth="150.0" style="-fx-background-color: fffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.CardController">
    <graphic>
       <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="106.0" prefWidth="150.0" spacing="5.0" style="-fx-background-color: ffff; -fx-border-color: F11111;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
          <children>
-            <ImageView fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="foodImage" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../resources/com/example/img/big_mac.jpeg" />
+                  <Image url="@../img/big_mac.jpeg" />
                </image>
             </ImageView>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="BIG MAC">
+                  <Label fx:id="foodName" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="BIG MAC">
                      <font>
                         <Font name="Berlin Sans FB" size="18.5" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="80.0" text="McDonald's" textAlignment="CENTER" textFill="#f51414">
+                  <Label fx:id="restaurant" alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="80.0" text="McDonald's" textAlignment="CENTER" textFill="#f51414">
                      <font>
                         <Font name="Berlin Sans FB" size="14.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="80.0" text="10000" textAlignment="CENTER" textFill="#9e9696">
+                  <Label fx:id="price" alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="80.0" text="10000 " textAlignment="CENTER" textFill="#9e9696">
                      <font>
                         <Font name="Berlin Sans FB" size="14.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="32.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../resources/com/example/img/five_stars.png" />
+                        <Image url="@../img/five_stars.png" />
                      </image>
                   </ImageView>
                </children>

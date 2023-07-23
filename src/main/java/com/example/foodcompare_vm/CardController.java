@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 
 public class CardController {
 
@@ -16,7 +17,7 @@ public class CardController {
     private Label foodName;
 
     @FXML
-    private ImageView image;
+    private ImageView foodImage;
 
     @FXML
     private Label price;
@@ -25,8 +26,14 @@ public class CardController {
     private Label restaurant;
 
 
+    private String [] colors = {"ECA702", "FFFF"};
     public void setData(Food food ){
-        Image image = new Image(getClass().getResource())
+        Image image = new Image(getClass().getResourceAsStream(food.getImageSrc()));
+        foodImage.setImage(image);
+        foodName.setText(food.getName());
+        restaurant.setText(food.getRestaurant());
+        price.setText(food.getPrice());
+        box.setStyle("-fx-background-color:  " + Color.web(colors[(int)(Math.random()* colors.length)]));
     }
 
 }
