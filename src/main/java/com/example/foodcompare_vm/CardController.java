@@ -26,7 +26,7 @@ public class CardController {
     private Label restaurant;
 
 
-    private String [] colors = {"ECA702", "FFF"};
+    private String [] colors = {"#ECA702", "#FFF"};
     public void setData(Food food ){
         Image image = new Image(getClass().getResourceAsStream(food.getImageSrc()));
         foodImage.setImage(image);

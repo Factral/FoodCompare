@@ -2,7 +2,7 @@ package com.example.model;
 
 public class Food {
     private String name;
-    private String ImageSrc;
+    private String imageSrc; // Corregido: debe comenzar con minúscula
     private String restaurant;
     private String price;
 
@@ -15,11 +15,11 @@ public class Food {
     }
 
     public String getImageSrc() {
-        return ImageSrc;
+        return imageSrc;
     }
 
     public void setImageSrc(String imageSrc) {
-        ImageSrc = imageSrc;
+        this.imageSrc = imageSrc;
     }
 
     public String getRestaurant() {

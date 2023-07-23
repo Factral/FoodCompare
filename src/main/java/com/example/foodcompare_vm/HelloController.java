@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class HelloController implements Initializable {
 
     @FXML
-    private HBox CardLayout;
+    private HBox cardLayoout;
     private List<Food> recentlyAdded;
 
     @Override
@@ -28,8 +28,7 @@ public class HelloController implements Initializable {
             HBox cardBox = fxmlLoader.load();
             CardController cardController = fxmlLoader.getController();
             cardController.setData(recentlyAdded.get(i));
-            CardLayout.getChildren().add(cardBox);
-
+            cardLayoout.getChildren().add(cardBox);
             }
         }
         catch (IOException e) {
@@ -37,7 +36,7 @@ public class HelloController implements Initializable {
         }
     }
 
-    private List<Food> recentlyAdded(){
+    private List<Food> recentlyAdded() {
 
         List<Food> ls = new ArrayList<>();
         Food food = new Food();

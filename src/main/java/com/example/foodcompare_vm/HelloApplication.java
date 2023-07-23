@@ -101,7 +101,7 @@ public class HelloApplication extends Application {
 
 
         // Cargar el archivo FXML
-        Parent root = FXMLLoader.load(getClass().getResource("Menú_Pp.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FView.fxml"));
 
         // Crear la Scene con el contenido cargado desde FXML
         Scene scene = new Scene(root); // Ajusta el tamaño según tus necesidades
