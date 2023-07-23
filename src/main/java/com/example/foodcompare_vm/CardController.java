@@ -25,8 +25,8 @@ public class CardController {
     private Label restaurant;
 
 
-    public void setData(Food food ){
-        Image image = new Image(getClass().getResource())
-    }
+   // public void setData(Food food ){
+    //    Image image = new Image(getClass().getResource());
+    //}
 
 }
