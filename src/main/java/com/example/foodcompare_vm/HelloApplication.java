@@ -1,12 +1,17 @@
 package com.example.foodcompare_vm;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.bson.Document;
+
 import java.io.IOException;
+import java.util.ArrayList;
+
 public class HelloApplication extends Application {
 
     @Override
@@ -17,12 +22,16 @@ public class HelloApplication extends Application {
         cConnection.connect();
 
         //get collection
-        MongoCollection collection = cConnection.getCollection("compras");
+        MongoCollection collection = cConnection.getCollection("plataformas");
         System.out.println(collection);
 
-        //get all elements from collection
-        for (Object document : collection.find()) {
-            System.out.println(document);
+        FindIterable<Document> documents = collection.find();
+
+        ArrayList<Platform> platforms = new ArrayList<>();
+
+        for (Document document : documents) {
+            Platform platform = new Platform(document.getString("id"), document.getString("name"));
+            platforms.add(platform);
         }
 
 
