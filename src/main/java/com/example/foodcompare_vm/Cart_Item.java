@@ -1,7 +1,7 @@
 package com.example.foodcompare_vm;
 
 public class Cart_Item {
-    private String name:
+    private String name;
     private String imageSrc;
     private int cant;
     private String platform;
