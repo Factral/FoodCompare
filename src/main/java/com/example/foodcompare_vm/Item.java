@@ -99,4 +99,8 @@ public class Item {
         return description;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
 }

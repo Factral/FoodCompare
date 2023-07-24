@@ -51,7 +51,7 @@ public class CardController {
         Image image = new Image(file.toURI().toString());
         foodImage.setImage(image);
         foodName.setText(food.getName());
-        restaurant.setText(food.getRestaurant());
+        restaurant.setText(food.getRestauranName());
         price.setText(food.getPrice());
         box.setStyle("-fx-background-color:  " + Color.web(colors[(int)(Math.random()* colors.length)]));
 
@@ -65,7 +65,7 @@ public class CardController {
                 ViewItemController controller = loader.getController();
                 System.out.println(food.getImageSrc());
                 stage.setScene(scene);
-                controller.intialize(food.getImageSrc(),food.getName(),food.getPrice(),food.getPlatform(),food.getPlatform(),food.getDesc());
+                controller.intialize(food.getId(),food.getImageSrc(),food.getName(),food.getPrice(),food.getRestaurant(),food.getPlatform(),food.getDesc());
             } catch (IOException e) {
                 e.printStackTrace();
             }

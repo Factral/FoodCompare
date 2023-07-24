@@ -130,15 +130,21 @@ public class HelloController implements Initializable {
         Customer cliente = new Customer("Maria", "valmonti", "pluto@gmail.com", 1234567890);
 
         MongoCollection<Document> carrito_collection = cConnection.getCollection("carrito");
-
+        System.out.println("carrito_doc: " + carrito_collection);
+        //first
+        Document carrito_docd = carrito_collection.find().first();
+        System.out.println("carrito_docd: " + carrito_docd);
         //retrieve docs from collection
         FindIterable<Document> carrito_doc = carrito_collection.find();
+
 
         //print length of items
         System.out.println("items length: " + items.size());
         // each doc contains a item
+        System.out.println("carrito_doc: " + carrito_doc);
 
         for (Document document : carrito_doc) {
+            System.out.println(document);
             Map<String, Object> order = new HashMap<>();
             // item in the document is a position in the items array
             Integer item_position = (Integer) document.get("item");
@@ -158,7 +164,16 @@ public class HelloController implements Initializable {
 
         System.out.println(items);
 
-
+        ArrayList<Map> itemsCar = carrito.getItems();
+        if (itemsCar.isEmpty()) {
+            System.out.println("No hay ningún item en el carrito.");
+        } else {
+            for (int i = 0; i < itemsCar.size(); i++) {
+                Item currentItemCar = (Item) itemsCar.get(i).get("item");
+                Platform currentPlatformCar = (Platform) itemsCar.get(i).get("platform");
+                System.out.println((i + 1) + ". " + currentItemCar.getName() + " - " + currentPlatformCar.getName() + " - " + itemsCar.get(i).get("price"));
+            }
+        }
 
 
 
@@ -221,10 +236,13 @@ public class HelloController implements Initializable {
                 if (platform.getName().equals(platformName)) {
                     System.out.println("HOLAAA");
                     Food food = new Food();
+                    food.setId(item.getId());
                     food.setName(item.getName());
                     food.setPrice(item.getPrices().get(j).toString());
                     food.setImageSrc(item.getImageSrc());
-                    food.setRestaurant(item.getRestaurant().getSrcImage());
+                    System.out.println(item.getRestaurant().getSrcImage());
+                    food.setRestaurantName(item.getRestaurant().getName());
+                    food.setRestaurant( item.getRestaurant().getSrcImage() );
                     food.setDesc(item.getDesc());
                     food.setPlatform(platformName);
                     ls.add(food);

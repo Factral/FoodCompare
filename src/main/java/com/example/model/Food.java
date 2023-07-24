@@ -7,7 +7,18 @@ public class Food {
     private String price;
     private String desc;
     private String platform;
+    private Integer id;
 
+    private String restauranName;
+
+
+    public Integer getId() {
+    	return id;
+    }
+
+    public void setId(Integer id) {
+    	this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -55,5 +66,13 @@ public class Food {
 
     public String getPlatform() {
     	return platform;
+    }
+
+    public void setRestaurantName(String restauranName) {
+    	this.restauranName = restauranName;
+    }
+
+    public String getRestauranName() {
+    	return restauranName;
     }
 }
