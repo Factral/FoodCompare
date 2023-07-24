@@ -32,14 +32,14 @@ public class HelloController implements Initializable {
     private List<Food> recentlyAdded;
     @FXML
     private Button user;
-    private Boolean alreadyExecuted  = false;
+
+    static Cart carrito = new Cart();
 
     ArrayList<Item> items = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println(alreadyExecuted);
-        if(!alreadyExecuted) {
+
         //conect to database
         CConnection cConnection = new CConnection();
         cConnection.connect();
@@ -118,8 +118,12 @@ public class HelloController implements Initializable {
             items.add(item);
         }
 
-        alreadyExecuted = true;
-        }
+        // instance the client
+        Customer cliente = new Customer("Maria", "valmonti", "pluto@gmail.com", 1234567890);
+
+
+
+
 
         try {
             recentlyAdded = new ArrayList<>( recentlyAdded(items, "Rappi"));
