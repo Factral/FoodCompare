@@ -38,6 +38,9 @@ public class HelloController implements Initializable {
     @FXML
     private Button user;
 
+    @FXML
+    private Button cart;
+
     static Cart carrito = new Cart();
 
     ArrayList<Item> items = new ArrayList<>();
@@ -243,6 +246,37 @@ public class HelloController implements Initializable {
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = (Stage) user.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void handleButtonClick_profile(ActionEvent event) {
+        // Aquí, realiza las acciones necesarias para cambiar a otra vista
+        // Por ejemplo, cargar la nueva vista y mostrarla en una nueva ventana.
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) user.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleButtonClick_cart(ActionEvent event) {
+        // Aquí, realiza las acciones necesarias para cambiar a otra vista
+        // Por ejemplo, cargar la nueva vista y mostrarla en una nueva ventana.
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Carrito.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) cart.getScene().getWindow();
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
