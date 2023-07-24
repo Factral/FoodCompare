@@ -2,8 +2,10 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -152,21 +154,21 @@
          <children>
             <VBox alignment="CENTER" prefHeight="99.0" prefWidth="335.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="335.0">
+                  <VBox alignment="CENTER" prefHeight="90.0" prefWidth="314.0">
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="282.0" spacing="20.0">
                            <children>
-                              <ImageView fitHeight="76.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../img/profile.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Perfil">
+                              <Label prefHeight="61.0" prefWidth="157.0" text="Perfil">
                                  <font>
-                                    <Font name="SansSerif Bold" size="62.0" />
+                                    <Font name="SansSerif Bold" size="55.0" />
                                  </font>
                               </Label>
                            </children>
@@ -175,6 +177,26 @@
                   </VBox>
                </children>
             </VBox>
+            <VBox alignment="CENTER" prefHeight="146.0" prefWidth="335.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../img/cj.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Carl Jhonson">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Accordion>
+              <panes>
+                <TitledPane animated="false" prefHeight="343.0" prefWidth="335.0" text="untitled 1" />
+                <TitledPane animated="false" text="untitled 2" />
+              </panes>
+            </Accordion>
          </children>
       </VBox>
    </center>
