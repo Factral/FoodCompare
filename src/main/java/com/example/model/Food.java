@@ -5,6 +5,9 @@ public class Food {
     private String imageSrc; // Corregido: debe comenzar con minúscula
     private String restaurant;
     private String price;
+    private String desc;
+    private String platform;
+
 
     public String getName() {
         return name;
@@ -36,5 +39,21 @@ public class Food {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public void setDesc(String desc) {
+    	this.desc = desc;
+    }
+
+    public String getDesc() {
+    	return desc;
+    }
+
+    public void setPlatform(String platform) {
+    	this.platform = platform;
+    }
+
+    public String getPlatform() {
+    	return platform;
     }
 }

@@ -62,7 +62,10 @@ public class CardController {
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) ver.getScene().getWindow();
+                ViewItemController controller = loader.getController();
+                System.out.println(food.getImageSrc());
                 stage.setScene(scene);
+                controller.intialize(food.getImageSrc(),food.getName(),food.getPrice(),food.getPlatform(),food.getPlatform(),food.getDesc());
             } catch (IOException e) {
                 e.printStackTrace();
             }

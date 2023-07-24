@@ -52,7 +52,7 @@ public class HelloController implements Initializable {
 
         // macdonalds
         Document rest_doc = rest_collecion.find(new Document("name", "McDonalds")).first();
-        Restaurant mcdonalds = new Restaurant(rest_doc.get("_id").toString(), rest_doc.getString("name"), rest_doc.getString("phonenumber"), rest_doc.getString("adress"));
+        Restaurant mcdonalds = new Restaurant(rest_doc.get("_id").toString(), rest_doc.getString("name"), rest_doc.getString("phonenumber"), rest_doc.getString("adress"), rest_doc.getString("src"));
 
         ArrayList<Platform> platforms_item1 = new ArrayList<>();
         System.out.println(rest_doc.get("Platforms"));
@@ -64,7 +64,7 @@ public class HelloController implements Initializable {
 
         // burger king
         rest_doc = rest_collecion.find(new Document("name", "Burguer King")).first();
-        Restaurant burgerking = new Restaurant(rest_doc.get("_id").toString(), rest_doc.getString("name"), rest_doc.getString("phonenumber"), rest_doc.getString("adress"));
+        Restaurant burgerking = new Restaurant(rest_doc.get("_id").toString(), rest_doc.getString("name"), rest_doc.getString("phonenumber"), rest_doc.getString("adress"), rest_doc.getString("src"));
 
         ArrayList<Platform> platforms_item2 = new ArrayList<>();
         for(Integer i: (ArrayList<Integer>) rest_doc.get("Platforms")){
@@ -74,7 +74,7 @@ public class HelloController implements Initializable {
 
         // kfc
         rest_doc = rest_collecion.find(new Document("name", "KFC")).first();
-        Restaurant kfc = new Restaurant(rest_doc.get("_id").toString(), rest_doc.getString("name"), rest_doc.getString("phonenumber"), rest_doc.getString("adress"));
+        Restaurant kfc = new Restaurant(rest_doc.get("_id").toString(), rest_doc.getString("name"), rest_doc.getString("phonenumber"), rest_doc.getString("adress"), rest_doc.getString("src"));
 
         ArrayList<Platform> platforms_item3 = new ArrayList<>();
         for(Integer i: (ArrayList<Integer>) rest_doc.get("Platforms")){
@@ -105,7 +105,7 @@ public class HelloController implements Initializable {
             Integer restaurant_position = (Integer) document.get("restaurant");
             Restaurant restaurant = restaurants.get(restaurant_position);
 
-            Item item = new Item(document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imgpath"));
+            Item item = new Item(document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imgpath"),document.getString("description") );
             items.add(item);
         }
 
@@ -167,8 +167,9 @@ public class HelloController implements Initializable {
                     food.setName(item.getName());
                     food.setPrice(item.getPrices().get(j).toString());
                     food.setImageSrc(item.getImageSrc());
-                    System.out.println(item.getImageSrc());
-                    food.setRestaurant(item.getRestaurant().getName());
+                    food.setRestaurant(item.getRestaurant().getSrcImage());
+                    food.setDesc(item.getDesc());
+                    food.setPlatform(platformName);
                     ls.add(food);
                 }
             }

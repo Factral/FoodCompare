@@ -11,12 +11,14 @@ public class Restaurant {
     private String adress;
     ArrayList<Item> items=new ArrayList<Item>();
     ArrayList<Platform> platforms=new ArrayList<Platform>();
+    private String srcImage;
 
-    public Restaurant(String id, String name, String phonenumber, String adress){
+    public Restaurant(String id, String name, String phonenumber, String adress, String srcImage){
         this.id = id;
         this.name = name;
         this.phonenumber=phonenumber;
         this.adress=adress;
+        this.srcImage = srcImage;
     }
 
     public void additem(Item item) {
@@ -42,6 +44,12 @@ public class Restaurant {
             this.platforms.add(platform);
         }
     }
+
+    public String getSrcImage() {
+        return srcImage;
+    }
+
+
 
 
 
