@@ -13,13 +13,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: eca702;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: eca702;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.CartController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="43.0" prefWidth="335.0" style="-fx-background-color: f2f2f2;" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#onEmpezarButtonClick_home" style="-fx-background-color: f2f2f2;">
                      <graphic>
                         <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -37,9 +37,9 @@
                <children>
                   <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
                      <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/heart.png" />
+                              <Image url="@../img/cart.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -51,7 +51,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
+                  <Button fx:id="profile" mnemonicParsing="false" onAction="#onEmpezarButtonClick_profile" style="-fx-background-color: f2f2f2;">
                      <graphic>
                         <ImageView fitHeight="47.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
