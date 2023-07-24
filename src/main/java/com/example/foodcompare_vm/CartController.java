@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CartController implements Initializable {
@@ -22,11 +24,38 @@ public class CartController implements Initializable {
 
     private VBox cardLayoout
 
+    private List<Cart_Item> recentlyAdded;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        recentlyAdded = new ArrayList<>(recentlyAdded());
+        try {
+        for (int i=0; i< recentlyAdded().size(); i++){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("card_Cart.fxml"));
+             VBox cardBox  = fxmlLoader.load();
+             CardCartController cardCartController = fxmlLoader.getController();
+             cardCartController.setData(recentlyAdded.get(i));
+             cardLayoout.getChildren().add(cardBox);
+            }
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private List<Cart_Item> recentlyAdded(){
+        List<Cart_Item> ls = new ArrayList<>();
+        Cart_Item cartItem = new Cart_Item();
+        cartItem.setImageSrc("com/example/img/atun_sd.jpg");
+        cartItem.setCant(20);
+        cartItem.setName("Big Mac");
+        cartItem.setPlatform("Rappi");
+        ls.add(cartItem);
+
+        return ls;
+
+
 
     }
-
 
 
 
