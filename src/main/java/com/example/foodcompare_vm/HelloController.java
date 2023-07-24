@@ -105,14 +105,13 @@ public class HelloController implements Initializable {
             Integer restaurant_position = (Integer) document.get("restaurant");
             Restaurant restaurant = restaurants.get(restaurant_position);
 
-            Item item = new Item(document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imageSrc"));
+            Item item = new Item(document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imgpath"));
             items.add(item);
         }
 
-
-        recentlyAdded = new ArrayList<>( recentlyAdded(items));
-
         try {
+            recentlyAdded = new ArrayList<>( recentlyAdded(items, "Rappi"));
+
             for(int i=0 ; i<recentlyAdded.size(); i++){
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("card.fxml"));
@@ -122,6 +121,7 @@ public class HelloController implements Initializable {
                 cardLayoout.getChildren().add(cardBox);
 
             }
+            recentlyAdded = new ArrayList<>( recentlyAdded(items, "DidiFood"));
             for(int i=0 ; i<recentlyAdded.size(); i++){
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("card.fxml"));
@@ -132,6 +132,8 @@ public class HelloController implements Initializable {
                 cardLayoout_1.getChildren().add(cardBox);
 
             }
+            recentlyAdded = new ArrayList<>( recentlyAdded(items, "UberEats"));
+
             for(int i=0 ; i<recentlyAdded.size(); i++){
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("card.fxml"));
@@ -149,118 +151,29 @@ public class HelloController implements Initializable {
         }
     }
 
-    private List<Food> recentlyAdded(List itemsList) {
+    private List<Food> recentlyAdded(List itemsList, String platformName) {
 
 
         List<Food> ls = new ArrayList<>();
-        Food food = new Food();
-        food.setName("Big Mac");
-        food.setPrice("10000");
-        food.setImageSrc("src/main/java/com/example/img/big_mac.jpg");
-        food.setRestaurant("Mc Donald's");
-        ls.add(food);
+        for (int i = 0; i < itemsList.size(); i++) {
+            Item item = (Item) itemsList.get(i);
+            //Map<Platform, Integer> , solo recupera la plataforma, y si didifood esta en la lista, entonces es un producto de comida
+            List<Platform> platforms = item.getPlatforms();
+            for (int j = 0; j < platforms.size(); j++) {
+                Platform platform = platforms.get(j);
+                if (platform.getName().equals(platformName)) {
+                    System.out.println("HOLAAA");
+                    Food food = new Food();
+                    food.setName(item.getName());
+                    food.setPrice(item.getPrices().get(j).toString());
+                    food.setImageSrc(item.getImageSrc());
+                    System.out.println(item.getImageSrc());
+                    food.setRestaurant(item.getRestaurant().getName());
+                    ls.add(food);
+                }
+            }
 
-
-        food = new Food();
-        food.setName("Cuarto  de \n Libra");
-        food.setPrice("10000");
-        food.setImageSrc("src/main/java/com/example/img/cuarto_libra.jpg");
-        food.setRestaurant("Mc Donald's");
-        ls.add(food);
-
-
-
-        food = new Food();
-        food.setName("Whopper");
-        food.setPrice("11000");
-        food.setImageSrc("src/main/java/com/example/img/whopper.jpg");
-        food.setRestaurant("Burguer King");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Big King");
-        food.setPrice("10000");
-        food.setImageSrc("src/main/java/com/example/img/big_king.jpg");
-        food.setRestaurant("Burguer King");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Crispy");
-        food.setPrice("12000");
-        food.setImageSrc("src/main/java/com/example/img/crispy.jpg");
-        food.setRestaurant("KFC");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Twister");
-        food.setPrice("11500");
-        food.setImageSrc("src/main/java/com/example/img/twister.jpg");
-        food.setRestaurant("KFC");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Super Pollo");
-        food.setPrice("39900");
-        food.setImageSrc("src/main/java/com/example/img/super_pollo.jpg");
-        food.setRestaurant("Domino's");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Hawaiian");
-        food.setPrice("49900");
-        food.setImageSrc("src/main/java/com/example/img/hawaiian.jpg");
-        food.setRestaurant("Domino's");
-        ls.add(food);
-
-
-        food = new Food();
-        food.setName("Arequipe \n Rolls");
-        food.setPrice("11900");
-        food.setImageSrc("src/main/java/com/example/img/rolls_large.jpg");
-        food.setRestaurant("Domino's");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Sandwich \n BBQ");
-        food.setPrice("25500");
-        food.setImageSrc("src/main/java/com/example/img/carne_sw.jpg");
-        food.setRestaurant("Subway");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Ensalada \n Atun");
-        food.setPrice("16000");
-        food.setImageSrc("src/main/java/com/example/img/atun_sd.jpg");
-        food.setRestaurant("Subway");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Sandwich \n Queso");
-        food.setPrice("12000");
-        food.setImageSrc("src/main/java/com/example/img/sd_huevoq.jpg");
-        food.setRestaurant("Subway");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Burrito");
-        food.setPrice("43000");
-        food.setImageSrc("src/main/java/com/example/img/burrito_sp.jpg");
-        food.setRestaurant("Taco Bell");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Quesarito");
-        food.setPrice("31250");
-        food.setImageSrc("src/main/java/com/example/img/quesarito.jpg");
-        food.setRestaurant("Taco Bell");
-        ls.add(food);
-
-        food = new Food();
-        food.setName("Bacon Fries");
-        food.setPrice("22500");
-        food.setImageSrc("src/main/java/com/example/img/bc_topfries.jpg");
-        food.setRestaurant("Taco Bell");
-        ls.add(food);
+        }
 
         return ls;
     }
