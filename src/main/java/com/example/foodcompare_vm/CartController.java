@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -21,8 +22,8 @@ public class CartController implements Initializable {
     private Button home;
     @FXML
     private Button profile;
-
-    private VBox cardLayoout;
+    @FXML
+    private HBox cardLayoout;
 
     private List<Cart_Item> recentlyAdded;
 
@@ -33,7 +34,7 @@ public class CartController implements Initializable {
         for (int i=0; i< recentlyAdded().size(); i++){
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("card_Cart.fxml"));
-             VBox cardBox  = fxmlLoader.load();
+             HBox cardBox  = fxmlLoader.load();
              CardCartController cardCartController = fxmlLoader.getController();
              cardCartController.setData(recentlyAdded.get(i));
              cardLayoout.getChildren().add(cardBox);
