@@ -32,11 +32,14 @@ public class HelloController implements Initializable {
     private List<Food> recentlyAdded;
     @FXML
     private Button user;
+    private Boolean alreadyExecuted  = false;
+
+    ArrayList<Item> items = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
+        System.out.println(alreadyExecuted);
+        if(!alreadyExecuted) {
         //conect to database
         CConnection cConnection = new CConnection();
         cConnection.connect();
@@ -96,7 +99,7 @@ public class HelloController implements Initializable {
         MongoCollection<Document> item_collection = cConnection.getCollection("productos");
         FindIterable<Document> items_doc = item_collection.find();
 
-        ArrayList<Item> items = new ArrayList<>();
+
         for (Document document : items_doc) {
 
             ArrayList<Integer> prices = (ArrayList<Integer>) document.get("prices");
@@ -113,6 +116,9 @@ public class HelloController implements Initializable {
 
             Item item = new Item(document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imgpath"),document.getString("description") );
             items.add(item);
+        }
+
+        alreadyExecuted = true;
         }
 
         try {
