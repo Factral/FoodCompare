@@ -1,115 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.foodcompare_vm.ViewItemController"
+            prefHeight="400.0" prefWidth="600.0">
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: f2f2f2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <HBox alignment="CENTER" prefHeight="78.0" prefWidth="335.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <HBox prefHeight="78.0" prefWidth="74.0">
-                     <children>
-                        <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/back.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </StackPane>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="78.0" prefWidth="59.0" />
-               </children>
-            </HBox>
-            <HBox prefHeight="95.0" prefWidth="112.0">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="112.0">
-                           <children>
-                              <StackPane prefHeight="38.0" prefWidth="40.0">
-                                 <children>
-                                    <ImageView fitHeight="34.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../img/logo.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </StackPane>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="44.0" prefWidth="53.0" />
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <HBox prefHeight="115.0" prefWidth="195.0" />
-                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
-                           <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
-                                 <graphic>
-                                    <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../img/heart_white.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                           </children>
-                           <opaqueInsets>
-                              <Insets bottom="10.0" />
-                           </opaqueInsets>
-                        </StackPane>
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-         </children>
-         <opaqueInsets>
-            <Insets bottom="10.0" />
-         </opaqueInsets>
-      </HBox>
-   </top>
-   <bottom>
-      <VBox alignment="CENTER" prefHeight="124.0" prefWidth="335.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER" prefHeight="108.0" prefWidth="335.0">
-               <children>
-                  <VBox alignment="CENTER" prefHeight="68.0" prefWidth="335.0">
-                     <children>
-                        <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="67.0" prefWidth="200.0" style="-fx-border-color: 1111; -fx-background-color: ECA702; -fx-background-radius: 30; -fx-text-fill: FFFF; -fx-font-size: 20; -fx-font-family: roboto;" text="Añadir al carrito" textFill="WHITE">
-                           <font>
-                              <Font name="Baskerville Old Face" size="22.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
-         <opaqueInsets>
-            <Insets top="20.0" />
-         </opaqueInsets>
-      </VBox>
-   </bottom>
-</BorderPane>
+</AnchorPane>
