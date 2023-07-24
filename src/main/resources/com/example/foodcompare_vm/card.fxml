@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <HBox fx:id="box" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="180.0" spacing="5.0" style="-fx-background-color: ffff; -fx-border-color: F11111;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.CardController">
    <children>
-      <ImageView fx:id="foodImage" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/big_mac.jpeg" />
-         </image>
-      </ImageView>
+      <VBox alignment="CENTER" prefHeight="84.0" prefWidth="62.0">
+         <children>
+            <ImageView fx:id="foodImage" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/big_mac.jpeg" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="20.0" prefWidth="62.0">
+               <children>
+                  <StackPane prefHeight="100.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+                     <children>
+                        <Button alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="16.0" prefWidth="40.0" style="-fx-background-color: FFFF; -fx-border-color: F11111; -fx-border-radius: 10px;" text="VER">
+                           <font>
+                              <Font size="7.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="4.0">
          <children>
             <Label fx:id="foodName" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="BIG MAC">
