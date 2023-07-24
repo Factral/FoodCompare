@@ -84,7 +84,7 @@ public class CartController implements Initializable {
     @FXML
     void onEmpezarButtonClick_profile(ActionEvent event) {
         try {
-            // Cargar el archivo FXML de la vista siguiente
+            // Cargar el archivo FXML de la vista siguientee
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
             Parent root = loader.load();
 
