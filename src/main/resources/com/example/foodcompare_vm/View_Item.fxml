@@ -23,7 +23,7 @@
                      <children>
                         <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="boton1" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="34.0" prefWidth="39.0" style="-fx-background-color: f2f2f2;">
+                              <Button fx:id="back" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="34.0" prefWidth="39.0" style="-fx-background-color: f2f2f2;">
                                  <graphic>
                                     <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -71,15 +71,7 @@
                      <children>
                         <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
-                                 <graphic>
-                                    <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../img/heart_white.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
+                              <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;" />
                            </children>
                            <opaqueInsets>
                               <Insets bottom="10.0" />
@@ -102,7 +94,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="68.0" prefWidth="335.0">
                      <children>
-                        <Button fx:id="boton2" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="67.0" prefWidth="200.0" style="-fx-border-color: 1111; -fx-background-color: ECA702; -fx-background-radius: 30; -fx-text-fill: FFFF; -fx-font-size: 20; -fx-font-family: roboto;" text="Añadir al carrito" textFill="WHITE">
+                        <Button fx:id="addCart" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="67.0" prefWidth="200.0" style="-fx-border-color: 1111; -fx-background-color: ECA702; -fx-background-radius: 30; -fx-text-fill: FFFF; -fx-font-size: 20; -fx-font-family: roboto;" text="Añadir al carrito" textFill="WHITE">
                            <font>
                               <Font name="Baskerville Old Face" size="22.0" />
                            </font>

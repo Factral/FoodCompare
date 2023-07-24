@@ -17,10 +17,10 @@ import java.io.IOException;
 public class ViewItemController {
 
     @FXML
-    private Button boton1;
+    private Button back;
 
     @FXML
-    private Button boton2;
+    private Button addCart;
 
     @FXML
     private ImageView itemImage;
@@ -61,17 +61,17 @@ public class ViewItemController {
         try {
             Button botonPresionado = (Button) event.getSource();
 
-            if (botonPresionado == boton1) {
+            if (botonPresionado == back) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FView.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
-                Stage stage = (Stage) boton1.getScene().getWindow();
+                Stage stage = (Stage) back.getScene().getWindow();
                 stage.setScene(scene);
-            } else if (botonPresionado == boton2) {
+            } else if (botonPresionado == addCart) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FView.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
-                Stage stage = (Stage) boton2.getScene().getWindow();
+                Stage stage = (Stage) addCart.getScene().getWindow();
                 stage.setScene(scene);
             }
         } catch (IOException e) {
