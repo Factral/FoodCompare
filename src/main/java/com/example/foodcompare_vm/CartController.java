@@ -3,18 +3,32 @@ package com.example.foodcompare_vm;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class CartController {
+public class CartController implements Initializable {
     @FXML
     private Button home;
     @FXML
     private Button profile;
+
+    private VBox cardLayoout
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
+
+
 
     @FXML
     void onEmpezarButtonClick_home(ActionEvent event) {
@@ -35,8 +49,6 @@ public class CartController {
             e.printStackTrace();
         }
     }
-
-
 
     @FXML
     void onEmpezarButtonClick_profile(ActionEvent event) {
