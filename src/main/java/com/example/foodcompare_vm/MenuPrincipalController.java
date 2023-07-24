@@ -18,10 +18,17 @@ public class MenuPrincipalController {
     @FXML
     void onEmpezarButtonClick(ActionEvent event) {
         try {
+            // Cargar el archivo FXML de la vista siguiente
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FView.fxml"));
             Parent root = loader.load();
+
+            // Obtener el controlador de la vista siguiente (si es necesario)
+            // Por ejemplo, si tienes un controlador para la vista siguiente, puedes obtenerlo así:
+            // VistaSiguienteController siguienteController = loader.getController();
+
+            // Crear una nueva escena y configurarla en el escenario (stage)
             Scene scene = new Scene(root);
-            Stage stage = (Stage) empezarButton.getScene().getWindow();
+            Stage stage = (Stage) empezarButton.getScene().getWindow(); // Obtener el escenario actual
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: f2f2f2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: f2f2f2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.ViewItemController">
    <top>
       <HBox alignment="CENTER" prefHeight="78.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
@@ -23,11 +23,18 @@
                      <children>
                         <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
                            <children>
-                              <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/back.png" />
-                                 </image>
-                              </ImageView>
+                              <Button fx:id="back" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="34.0" prefWidth="39.0" style="-fx-background-color: f2f2f2;">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
                            </children>
                         </StackPane>
                      </children>

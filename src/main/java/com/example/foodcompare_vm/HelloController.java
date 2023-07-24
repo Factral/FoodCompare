@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import org.bson.Document;
 
 import java.io.IOException;
@@ -19,6 +20,11 @@ public class HelloController implements Initializable {
 
     @FXML
     private HBox cardLayoout;
+    @FXML
+    private HBox cardLayoout_1;
+    @FXML
+    private HBox cardLayoout_2;
+
     private List<Food> recentlyAdded;
 
     @Override
@@ -114,7 +120,29 @@ public class HelloController implements Initializable {
                 CardController cardController = fxmlLoader.getController();
                 cardController.setData(recentlyAdded.get(i));
                 cardLayoout.getChildren().add(cardBox);
+
             }
+            for(int i=0 ; i<recentlyAdded.size(); i++){
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("card.fxml"));
+                HBox cardBox = fxmlLoader.load();
+                CardController cardController = fxmlLoader.getController();
+                cardController.setData(recentlyAdded.get(i));
+
+                cardLayoout_1.getChildren().add(cardBox);
+
+            }
+            for(int i=0 ; i<recentlyAdded.size(); i++){
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("card.fxml"));
+                HBox cardBox = fxmlLoader.load();
+                CardController cardController = fxmlLoader.getController();
+                cardController.setData(recentlyAdded.get(i));
+
+                cardLayoout_2.getChildren().add(cardBox);
+            }
+
+
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -136,7 +164,7 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Cuarto  de \n Libra");
         food.setPrice("10000");
-        food.setImageSrc("src/main/java/com/example/img/home.png");
+        food.setImageSrc("src/main/java/com/example/img/cuarto_libra.jpg");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
 
@@ -145,28 +173,28 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Whopper");
         food.setPrice("11000");
-        food.setImageSrc("src/main/java/com/example/img/whopper.png");
+        food.setImageSrc("src/main/java/com/example/img/whopper.jpg");
         food.setRestaurant("Burguer King");
         ls.add(food);
 
         food = new Food();
         food.setName("Big King");
         food.setPrice("10000");
-        food.setImageSrc("src/main/java/com/example/img/big_king.png");
+        food.setImageSrc("src/main/java/com/example/img/big_king.jpg");
         food.setRestaurant("Burguer King");
         ls.add(food);
 
         food = new Food();
         food.setName("Crispy");
         food.setPrice("12000");
-        food.setImageSrc("src/main/java/com/example/img/crispy.webp");
+        food.setImageSrc("src/main/java/com/example/img/crispy.jpg");
         food.setRestaurant("KFC");
         ls.add(food);
 
         food = new Food();
         food.setName("Twister");
         food.setPrice("11500");
-        food.setImageSrc("src/main/java/com/example/img/twister.png");
+        food.setImageSrc("src/main/java/com/example/img/twister.jpg");
         food.setRestaurant("KFC");
         ls.add(food);
 
@@ -180,7 +208,7 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Hawaiian");
         food.setPrice("49900");
-        food.setImageSrc("src/main/java/com/example/img/hawaiian.webp");
+        food.setImageSrc("src/main/java/com/example/img/hawaiian.jpg");
         food.setRestaurant("Domino's");
         ls.add(food);
 
@@ -209,28 +237,28 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Sandwich \n Queso");
         food.setPrice("12000");
-        food.setImageSrc("src/main/java/com/example/img/sd_huevoq.avif");
+        food.setImageSrc("src/main/java/com/example/img/sd_huevoq.jpg");
         food.setRestaurant("Subway");
         ls.add(food);
 
         food = new Food();
         food.setName("Burrito");
         food.setPrice("43000");
-        food.setImageSrc("src/main/java/com/example/img/burrito_sp.webp");
+        food.setImageSrc("src/main/java/com/example/img/burrito_sp.jpg");
         food.setRestaurant("Taco Bell");
         ls.add(food);
 
         food = new Food();
         food.setName("Quesarito");
         food.setPrice("31250");
-        food.setImageSrc("src/main/java/com/example/img/quesarito.webp");
+        food.setImageSrc("src/main/java/com/example/img/quesarito.jpg");
         food.setRestaurant("Taco Bell");
         ls.add(food);
 
         food = new Food();
         food.setName("Bacon Fries");
         food.setPrice("22500");
-        food.setImageSrc("src/main/java/com/example/img/bc_topfries");
+        food.setImageSrc("src/main/java/com/example/img/bc_topfries.jpg");
         food.setRestaurant("Taco Bell");
         ls.add(food);
 
