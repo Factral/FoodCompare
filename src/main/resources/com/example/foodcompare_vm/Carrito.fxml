@@ -133,7 +133,7 @@
       </HBox>
    </top>
    <center>
-      <VBox prefHeight="544.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="544.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" prefHeight="49.0" prefWidth="335.0">
                <children>
@@ -160,7 +160,7 @@
                   </VBox>
                </children>
             </VBox>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="335.0" spacing="5.0">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="335.0" spacing="5.0">
                <children>
                   <ScrollPane prefHeight="349.0" prefWidth="315.0" style="-fx-background-color: eca702;">
                      <content>
