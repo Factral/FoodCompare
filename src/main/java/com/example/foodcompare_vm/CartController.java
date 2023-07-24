@@ -192,10 +192,10 @@ public class CartController implements Initializable {
 
 
     @FXML
-    void onEmpezarButtonClick_home(ActionEvent event) {
+    void onEmpezarButtonClick_profile(ActionEvent event) {
         try {
             // Cargar el archivo FXML de la vista siguiente
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
             Parent root = loader.load();
 
             // Obtener el controlador de la vista siguiente (si es necesario)
@@ -212,7 +212,7 @@ public class CartController implements Initializable {
     }
 
     @FXML
-    void onEmpezarButtonClick_profile(ActionEvent event) {
+    void onEmpezarButtonClick_home(ActionEvent event) {
         try {
             Button botonPresionado = (Button) event.getSource();
 
