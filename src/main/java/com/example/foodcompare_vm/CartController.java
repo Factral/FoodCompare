@@ -22,7 +22,7 @@ public class CartController implements Initializable {
     @FXML
     private Button profile;
 
-    private VBox cardLayoout
+    private VBox cardLayoout;
 
     private List<Cart_Item> recentlyAdded;
 
