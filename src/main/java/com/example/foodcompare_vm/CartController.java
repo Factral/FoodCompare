@@ -46,6 +46,7 @@ public class CartController implements Initializable {
     private List<Cart_Item> recentlyAdded(){
         List<Cart_Item> ls = new ArrayList<>();
         Cart_Item cartItem = new Cart_Item();
+
         cartItem.setImageSrc("com/example/img/atun_sd.jpg");
         cartItem.setCant(20);
         cartItem.setName("Big Mac");

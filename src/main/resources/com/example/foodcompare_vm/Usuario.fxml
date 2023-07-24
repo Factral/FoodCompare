@@ -404,9 +404,69 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                      <content>
-                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: f2f2f2;">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: f2f2f2;">
                            <children>
-                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                              <HBox alignment="CENTER" prefHeight="197.0" prefWidth="289.0">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="274.0" style="-fx-border-color: eca702; -fx-border-radius: 10px;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="111.0" prefWidth="256.0">
+                                             <children>
+                                                <ImageView fitHeight="109.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/big_mac.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="140.0" prefWidth="275.0" spacing="15.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Big Mac" wrapText="true">
+                                                               <font>
+                                                                  <Font name="Berlin Sans FB" size="27.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                         <children>
+                                                            <Label text="10" wrapText="true">
+                                                               <font>
+                                                                  <Font name="Berlin Sans FB Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Unidades">
+                                                               <font>
+                                                                  <Font name="Berlin Sans FB Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                         <children>
+                                                            <Label text="Rappi" textFill="#f20b0b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children></HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" />
                            </children>
                            <padding>
