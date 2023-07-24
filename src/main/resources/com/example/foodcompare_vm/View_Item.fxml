@@ -3,14 +3,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: f2f2f2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -88,9 +89,9 @@
       </HBox>
    </top>
    <bottom>
-      <VBox alignment="CENTER" prefHeight="124.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="106.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="108.0" prefWidth="335.0">
+            <VBox alignment="CENTER" prefHeight="95.0" prefWidth="335.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="68.0" prefWidth="335.0">
                      <children>
@@ -112,4 +113,108 @@
          </opaqueInsets>
       </VBox>
    </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="246.0" prefWidth="335.0">
+               <children>
+                  <HBox prefHeight="99.0" prefWidth="166.0" />
+                  <HBox alignment="CENTER" prefHeight="197.0" prefWidth="282.0">
+                     <children>
+                        <ImageView fitHeight="195.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/big_mac.jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="99.0" prefWidth="166.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="131.0" prefWidth="335.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="169.0" text="BIG MAC">
+                           <font>
+                              <Font name="Berlin Sans FB" size="43.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="335.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="169.0" text="10000" textAlignment="CENTER" textFill="#eca702">
+                           <font>
+                              <Font name="Berlin Sans FB" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="281.0" prefWidth="335.0">
+               <children>
+                  <VBox prefHeight="84.0" prefWidth="335.0">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="335.0">
+                           <children>
+                              <VBox prefHeight="95.0" prefWidth="239.0" spacing="20.0">
+                                 <children>
+                                    <Label text="Disponible en:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Rappi - DidiFood - UberEats">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Pane prefHeight="95.0" prefWidth="95.0">
+                                 <children>
+                                    <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/Mcdonalds_logo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="128.0" prefWidth="335.0" spacing="12.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="154.0" text="Sobre el producto:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="94.0" prefWidth="305.0" text="Cubierta con pepinillos, crujiente lechuga, cebollas y queso americano para lograr ese sabor único de la hamburguesa 100% de carne." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
