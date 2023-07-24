@@ -193,7 +193,11 @@
             </VBox>
             <Accordion>
               <panes>
-                <TitledPane animated="false" prefHeight="343.0" prefWidth="335.0" text="untitled 1" />
+                <TitledPane animated="false" prefHeight="343.0" prefWidth="335.0" text="Datos Personales">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TitledPane>
                 <TitledPane animated="false" text="untitled 2" />
               </panes>
             </Accordion>
