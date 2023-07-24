@@ -206,6 +206,9 @@
                            <font>
                               <Font size="15.0" />
                            </font>
+                           <opaqueInsets>
+                              <Insets top="1.0" />
+                           </opaqueInsets>
                         </Label>
                      </children>
                      <padding>
