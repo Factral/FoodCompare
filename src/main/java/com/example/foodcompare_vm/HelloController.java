@@ -183,5 +183,29 @@ public class HelloController implements Initializable {
         return ls;
     }
 
+    @FXML
+    private void handleButtonClick(ActionEvent event) {
+        // Aquí, realiza las acciones necesarias para cambiar a otra vista
+        // Por ejemplo, cargar la nueva vista y mostrarla en una nueva ventana.
+
+        try {
+            // Cargar el archivo FXML de la nueva vista
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("Usuario.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Crear una nueva escena y mostrarla en una nueva ventana
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Nueva Vista");
+            stage.show();
+
+            // Opcional: cerrar la ventana actual si es necesario
+            // ((Stage) myButton.getScene().getWindow()).close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
