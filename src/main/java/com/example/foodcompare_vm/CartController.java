@@ -23,6 +23,8 @@ public class CartController implements Initializable {
     @FXML
     private Button profile;
     @FXML
+    private Button home_2;
+    @FXML
     private HBox cardLayoout;
 
     private List<Cart_Item> recentlyAdded;
@@ -84,18 +86,21 @@ public class CartController implements Initializable {
     @FXML
     void onEmpezarButtonClick_profile(ActionEvent event) {
         try {
-            // Cargar el archivo FXML de la vista siguientee
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
-            Parent root = loader.load();
+            Button botonPresionado = (Button) event.getSource();
 
-            // Obtener el controlador de la vista siguiente (si es necesario)
-            // Por ejemplo, si tienes un controlador para la vista siguiente, puedes obtenerlo así:
-            // VistaSiguienteController siguienteController = loader.getController();
-
-            // Crear una nueva escena y configurarla en el escenario (stage)
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) profile.getScene().getWindow(); // Obtener el escenario actual
-            stage.setScene(scene);
+            if (botonPresionado == home) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FView.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) home.getScene().getWindow();
+                stage.setScene(scene);
+            } else if (botonPresionado == home_2) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Fview.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) home_2.getScene().getWindow();
+                stage.setScene(scene);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

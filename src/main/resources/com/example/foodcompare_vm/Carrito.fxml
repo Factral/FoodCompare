@@ -190,10 +190,13 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="68.0" prefWidth="335.0">
                            <children>
-                              <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="67.0" prefWidth="200.0" style="-fx-border-color: 1111; -fx-background-color: ffff; -fx-background-radius: 30; -fx-text-fill: eca702; -fx-font-size: 20; -fx-font-family: roboto;" text="Pagar" textFill="#eca702">
+                              <Button fx:id="home_2" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#onEmpezarButtonClick_home" prefHeight="67.0" prefWidth="200.0" style="-fx-border-color: 1111; -fx-background-color: ffff; -fx-background-radius: 30; -fx-text-fill: eca702; -fx-font-size: 20; -fx-font-family: roboto;" text="Pagar" textFill="#eca702">
                                  <font>
                                     <Font name="Baskerville Old Face" size="22.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Button>
                            </children>
                         </VBox>
