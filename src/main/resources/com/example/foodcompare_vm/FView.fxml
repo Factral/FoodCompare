@@ -179,9 +179,9 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="335.0">
+            <VBox alignment="CENTER" prefHeight="72.0" prefWidth="335.0">
                <children>
-                  <Label prefHeight="37.0" prefWidth="121.0" text="Deliciosa" textAlignment="CENTER">
+                  <Label prefHeight="32.0" prefWidth="306.0" text="Deliciosa" textAlignment="CENTER">
                      <font>
                         <Font name="SansSerif Bold" size="27.0" />
                      </font>
@@ -192,7 +192,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="37.0" prefWidth="208.0" text="Comida para ti">
+                  <Label prefHeight="32.0" prefWidth="299.0" text="Comida para ti">
                      <font>
                         <Font name="SansSerif Bold" size="27.0" />
                      </font>

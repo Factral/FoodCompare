@@ -38,11 +38,11 @@
       </VBox>
    </bottom>
    <top>
-      <VBox prefHeight="277.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="277.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="110.0" prefWidth="335.0" style="-fx-background-color: eca702;">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="297.0" style="-fx-background-color: eca702;">
                <children>
-                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50%; -fx-background-color: ffff;">
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="80.0" style="-fx-background-radius: 50%; -fx-background-color: ffff;">
                      <VBox.margin>
                         <Insets left="40.0" top="30.0" />
                      </VBox.margin>
@@ -56,14 +56,14 @@
                   </StackPane>
                </children>
             </VBox>
-            <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="127.0" prefWidth="335.0" style="-fx-padding: 10;">
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="127.0" prefWidth="335.0" style="-fx-padding: 10;">
                <children>
-                  <Label prefHeight="59.0" prefWidth="279.0" text="Sabor para" textFill="WHITE">
+                  <Label prefHeight="59.0" prefWidth="295.0" text="Sabor para" textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font name="SansSerif Bold" size="51.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="279.0" text="Todos" textAlignment="RIGHT" textFill="WHITE">
+                  <Label alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="297.0" text="Todos" textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font name="SansSerif Bold" size="51.0" />
                      </font>

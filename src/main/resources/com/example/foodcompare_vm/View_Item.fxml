@@ -17,7 +17,7 @@
    <top>
       <HBox alignment="CENTER" prefHeight="78.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <HBox prefHeight="78.0" prefWidth="74.0">
                      <children>
@@ -42,7 +42,7 @@
                   <HBox prefHeight="78.0" prefWidth="59.0" />
                </children>
             </HBox>
-            <HBox prefHeight="95.0" prefWidth="112.0">
+            <HBox alignment="CENTER" prefHeight="95.0" prefWidth="112.0">
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
@@ -64,7 +64,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <HBox prefHeight="115.0" prefWidth="195.0" />
                   <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
@@ -121,11 +121,11 @@
       </VBox>
    </bottom>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="246.0" prefWidth="335.0">
+            <HBox alignment="CENTER" prefHeight="246.0" prefWidth="335.0">
                <children>
-                  <HBox prefHeight="99.0" prefWidth="166.0" />
+                  <HBox alignment="CENTER" prefHeight="99.0" prefWidth="166.0" />
                   <HBox alignment="CENTER" prefHeight="197.0" prefWidth="282.0">
                      <children>
                         <ImageView fitHeight="195.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
@@ -144,7 +144,7 @@
                   <Insets top="20.0" />
                </padding>
             </HBox>
-            <VBox alignment="TOP_CENTER" prefHeight="131.0" prefWidth="335.0">
+            <VBox alignment="CENTER" prefHeight="131.0" prefWidth="335.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
@@ -155,7 +155,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="335.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="335.0">
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="169.0" text="10000" textAlignment="CENTER" textFill="#eca702">
                            <font>
@@ -166,9 +166,9 @@
                   </VBox>
                </children>
             </VBox>
-            <VBox prefHeight="281.0" prefWidth="335.0">
+            <VBox alignment="CENTER" prefHeight="281.0" prefWidth="335.0">
                <children>
-                  <VBox prefHeight="84.0" prefWidth="335.0">
+                  <VBox alignment="CENTER" prefHeight="84.0" prefWidth="335.0">
                      <children>
                         <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="335.0">
                            <children>
@@ -202,9 +202,9 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <VBox prefHeight="128.0" prefWidth="335.0" spacing="12.0">
+                  <VBox alignment="CENTER" prefHeight="128.0" prefWidth="335.0" spacing="12.0">
                      <children>
-                        <Label prefHeight="21.0" prefWidth="154.0" text="Sobre el producto:">
+                        <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="309.0" text="Sobre el producto:">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
