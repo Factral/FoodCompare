@@ -26,6 +26,8 @@ public class Item {
     private String srcImage;
     private String description;
 
+    private Integer id;
+
     /**
      * Constructor de la clase Item.
      *
@@ -35,7 +37,8 @@ public class Item {
      * @param prices       la lista de precios
      * @param re           el restaurante al que pertenece el elemento
      */
-    public Item(String name, Boolean availability, List<Platform> platforms, List<Integer> prices, Restaurant re, String srcImage, String description) {
+    public Item(Integer id,String name, Boolean availability, List<Platform> platforms, List<Integer> prices, Restaurant re, String srcImage, String description) {
+        this.id = id;
         this.name = name;
         this.availability = availability;
         this.re = re;

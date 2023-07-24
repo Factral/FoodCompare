@@ -21,6 +21,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import java.util.Map;
+import java.util.HashMap;
+import java.lang.Math;
+
+
 public class HelloController implements Initializable {
 
     @FXML
@@ -99,7 +104,7 @@ public class HelloController implements Initializable {
         MongoCollection<Document> item_collection = cConnection.getCollection("productos");
         FindIterable<Document> items_doc = item_collection.find();
 
-
+        Integer k = 0;
         for (Document document : items_doc) {
 
             ArrayList<Integer> prices = (ArrayList<Integer>) document.get("prices");
@@ -114,12 +119,45 @@ public class HelloController implements Initializable {
             Integer restaurant_position = (Integer) document.get("restaurant");
             Restaurant restaurant = restaurants.get(restaurant_position);
 
-            Item item = new Item(document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imgpath"),document.getString("description") );
+            Item item = new Item(k,document.getString("name"), document.getBoolean("availability"),platforms_item, prices , restaurant, document.getString("imgpath"),document.getString("description") );
             items.add(item);
+            k++;
         }
 
-        // instance the client
         Customer cliente = new Customer("Maria", "valmonti", "pluto@gmail.com", 1234567890);
+
+        MongoCollection<Document> carrito_collection = cConnection.getCollection("carrito");
+
+        //retrieve docs from collection
+        FindIterable<Document> carrito_doc = carrito_collection.find();
+
+        //print length of items
+        System.out.println("items length: " + items.size());
+        // each doc contains a item
+
+        for (Document document : carrito_doc) {
+            Map<String, Object> order = new HashMap<>();
+            // item in the document is a position in the items array
+            Integer item_position = (Integer) document.get("item");
+            Item item = items.get(item_position);
+
+            order.put("item", item);
+
+            // platform in the document is a position in the platforms array
+            Integer platform_position = (Integer) document.get("platform");
+            Platform platform = platforms.get(platform_position);
+
+            order.put("platform", platform);
+
+            order.put("quantity", document.get("quantity"));
+            carrito.add(order);
+        }
+
+        System.out.println(items);
+
+
+
+
 
 
 
