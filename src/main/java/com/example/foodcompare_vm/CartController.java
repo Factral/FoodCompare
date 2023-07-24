@@ -1,6 +1,5 @@
 package com.example.foodcompare_vm;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +10,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class UserController {
-
+public class CartController {
     @FXML
     private Button home;
     @FXML
-    private Button cart;
+    private Button profile;
 
     @FXML
     void onEmpezarButtonClick_home(ActionEvent event) {
@@ -41,10 +39,10 @@ public class UserController {
 
 
     @FXML
-    void onEmpezarButtonClick_cart(ActionEvent event) {
+    void onEmpezarButtonClick_profile(ActionEvent event) {
         try {
             // Cargar el archivo FXML de la vista siguiente
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Carrito.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
             Parent root = loader.load();
 
             // Obtener el controlador de la vista siguiente (si es necesario)
@@ -53,7 +51,7 @@ public class UserController {
 
             // Crear una nueva escena y configurarla en el escenario (stage)
             Scene scene = new Scene(root);
-            Stage stage = (Stage) cart.getScene().getWindow(); // Obtener el escenario actual
+            Stage stage = (Stage) profile.getScene().getWindow(); // Obtener el escenario actual
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
