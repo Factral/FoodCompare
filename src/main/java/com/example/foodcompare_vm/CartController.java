@@ -20,7 +20,7 @@ public class CartController implements Initializable {
     @FXML
     private Button profile;
 
-    private VBox cardLayoout
+    private VBox cardLayoout;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
