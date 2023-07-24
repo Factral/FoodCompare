@@ -21,6 +21,10 @@ public class Item {
 
     private boolean availability;
 
+    private Restaurant re;
+
+    private String srcImage;
+
     /**
      * Constructor de la clase Item.
      *
@@ -30,9 +34,11 @@ public class Item {
      * @param prices       la lista de precios
      * @param re           el restaurante al que pertenece el elemento
      */
-    public Item(String name, Boolean availability, List<Platform> platforms, List<Integer> prices, Restaurant re) {
+    public Item(String name, Boolean availability, List<Platform> platforms, List<Integer> prices, Restaurant re, String srcImage) {
         this.name = name;
         this.availability = availability;
+        this.re = re;
+        this.srcImage = srcImage;
 
         for (int i = 0; i < platforms.size(); i++) {
             map.put(platforms.get(i), prices.get(i));
@@ -57,6 +63,31 @@ public class Item {
      */
     public Map<Platform, Integer> getMap() {
         return map;
+    }
+
+    public List<Integer> getPrices() {
+        List<Integer> prices = new ArrayList<Integer>();
+        for (Map.Entry<Platform, Integer> entry : map.entrySet()) {
+            prices.add(entry.getValue());
+        }
+        return prices;
+    }
+
+    public List<Platform> getPlatforms() {
+        List<Platform> platforms = new ArrayList<Platform>();
+        for (Map.Entry<Platform, Integer> entry : map.entrySet()) {
+            platforms.add(entry.getKey());
+        }
+        return platforms;
+    }
+
+    //GETRESTAURANT
+    public Restaurant getRestaurant() {
+        return re;
+    }
+    //getsrc
+    public String getImageSrc() {
+        return srcImage;
     }
 
 }
