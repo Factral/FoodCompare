@@ -42,7 +42,7 @@ public class HelloController implements Initializable {
         Food food = new Food();
         food.setName("Big Mac");
         food.setPrice("10000");
-        food.setImageSrc("/img/big_mac.jpeg");
+        food.setImageSrc("src/main/java/com/example/img/big_mac.jpg");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
 
@@ -50,7 +50,7 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Cuarto  de \n Libra");
         food.setPrice("10000");
-        food.setImageSrc("com/example/img/home.png");
+        food.setImageSrc("src/main/java/com/example/img/home.png");
         food.setRestaurant("Mc Donald's");
         ls.add(food);
 
@@ -59,42 +59,42 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Whopper");
         food.setPrice("11000");
-        food.setImageSrc("/img/whopper.png");
+        food.setImageSrc("src/main/java/com/example/img/whopper.png");
         food.setRestaurant("Burguer King");
         ls.add(food);
 
         food = new Food();
         food.setName("Big King");
         food.setPrice("10000");
-        food.setImageSrc("/img/big_king.png");
+        food.setImageSrc("src/main/java/com/example/img/big_king.png");
         food.setRestaurant("Burguer King");
         ls.add(food);
 
         food = new Food();
         food.setName("Crispy");
         food.setPrice("12000");
-        food.setImageSrc("/img/crispy.webp");
+        food.setImageSrc("src/main/java/com/example/img/crispy.webp");
         food.setRestaurant("KFC");
         ls.add(food);
 
         food = new Food();
         food.setName("Twister");
         food.setPrice("11500");
-        food.setImageSrc("/img/twister.png");
+        food.setImageSrc("src/main/java/com/example/img/twister.png");
         food.setRestaurant("KFC");
         ls.add(food);
 
         food = new Food();
         food.setName("Super Pollo");
         food.setPrice("39900");
-        food.setImageSrc("/img/super_pollo.jpg");
+        food.setImageSrc("src/main/java/com/example/img/super_pollo.jpg");
         food.setRestaurant("Domino's");
         ls.add(food);
 
         food = new Food();
         food.setName("Hawaiian");
         food.setPrice("49900");
-        food.setImageSrc("/img/hawaiian.webp");
+        food.setImageSrc("src/main/java/com/example/img/hawaiian.webp");
         food.setRestaurant("Domino's");
         ls.add(food);
 
@@ -102,52 +102,51 @@ public class HelloController implements Initializable {
         food = new Food();
         food.setName("Arequipe \n Rolls");
         food.setPrice("11900");
-        food.setImageSrc("/img/rolls_large.jpg");
+        food.setImageSrc("src/main/java/com/example/img/rolls_large.jpg");
         food.setRestaurant("Domino's");
         ls.add(food);
 
         food = new Food();
         food.setName("Sandwich \n BBQ");
         food.setPrice("25500");
-        food.setImageSrc("/img/carne_sw.jpg");
+        food.setImageSrc("src/main/java/com/example/img/carne_sw.jpg");
         food.setRestaurant("Subway");
         ls.add(food);
 
         food = new Food();
         food.setName("Ensalada \n Atun");
         food.setPrice("16000");
-        food.setImageSrc("/img/atun_sd.jpg");
+        food.setImageSrc("src/main/java/com/example/img/atun_sd.jpg");
         food.setRestaurant("Subway");
         ls.add(food);
 
         food = new Food();
         food.setName("Sandwich \n Queso");
         food.setPrice("12000");
-        food.setImageSrc("/img/sd_huevoq.avif");
+        food.setImageSrc("src/main/java/com/example/img/sd_huevoq.avif");
         food.setRestaurant("Subway");
         ls.add(food);
 
         food = new Food();
         food.setName("Burrito");
         food.setPrice("43000");
-        food.setImageSrc("/img/burrito_sp.webp");
+        food.setImageSrc("src/main/java/com/example/img/burrito_sp.webp");
         food.setRestaurant("Taco Bell");
         ls.add(food);
 
         food = new Food();
         food.setName("Quesarito");
         food.setPrice("31250");
-        food.setImageSrc("/img/quesarito.webp");
+        food.setImageSrc("src/main/java/com/example/img/quesarito.webp");
         food.setRestaurant("Taco Bell");
         ls.add(food);
 
         food = new Food();
         food.setName("Bacon Fries");
         food.setPrice("22500");
-        food.setImageSrc("/img/bc_topfries");
+        food.setImageSrc("src/main/java/com/example/img/bc_topfries");
         food.setRestaurant("Taco Bell");
         ls.add(food);
-
 
         return ls;
     }

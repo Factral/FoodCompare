@@ -30,7 +30,13 @@ public class CardController {
 
     private String [] colors = {"ECA702", "FFF"};
     public void setData(Food food ){
-        Image image = new Image(new File(food.getImageSrc()).toURI().toString());
+        System.out.println(food.getImageSrc());
+        // load the image from the folder img
+        File file = new File(food.getImageSrc());
+
+        System.out.println(file.toURI().toString());
+
+        Image image = new Image(file.toURI().toString());
         foodImage.setImage(image);
         foodName.setText(food.getName());
         restaurant.setText(food.getRestaurant());
