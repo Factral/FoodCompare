@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: eca702;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: eca702;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.MenuPrincipalController">
    <bottom>
       <VBox alignment="CENTER" prefHeight="124.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" prefHeight="108.0" prefWidth="335.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="35.0" prefWidth="335.0" />
-                  <Button alignment="CENTER" contentDisplay="BOTTOM" ellipsisString="" mnemonicParsing="false" prefHeight="63.0" prefWidth="268.0" style="-fx-border-color: 1111; -fx-background-color: ffff; -fx-background-radius: 30; -fx-text-fill: eca702; -fx-font-size: 20; -fx-font-family: roboto;" text="Empezar" textAlignment="CENTER" textFill="#e12222" textOverrun="LEADING_ELLIPSIS">
+                  <Button fx:id="empezarButton" alignment="CENTER" contentDisplay="BOTTOM" ellipsisString="" mnemonicParsing="false" onAction="#onEmpezarButtonClick" prefHeight="63.0" prefWidth="268.0" style="-fx-border-color: 1111; -fx-background-color: ffff; -fx-background-radius: 30; -fx-text-fill: eca702; -fx-font-size: 20; -fx-font-family: roboto;" text="Empezar" textAlignment="CENTER" textFill="#e12222" textOverrun="LEADING_ELLIPSIS">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

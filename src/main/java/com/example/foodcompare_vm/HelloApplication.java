@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class HelloApplication extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws Exception  {
 
         //conect to database
         CConnection cConnection = new CConnection();
@@ -101,7 +101,7 @@ public class HelloApplication extends Application {
 
 
         // Cargar el archivo FXML
-        Parent root = FXMLLoader.load(getClass().getResource("FView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Menú_Pp.fxml"));
 
         // Crear la Scene con el contenido cargado desde FXML
         Scene scene = new Scene(root); // Ajusta el tamaño según tus necesidades
