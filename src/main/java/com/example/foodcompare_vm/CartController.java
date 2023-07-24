@@ -145,7 +145,7 @@ public class CartController implements Initializable {
         // each doc contains a item
         System.out.println("carrito_doc: " + carrito_doc);
         List<Cart_Item> ls = new ArrayList<>();
-<<<<<<< HEAD
+
         for (Document document : carrito_doc) {
             System.out.println(document);
             Map<String, Object> order = new HashMap<>();
