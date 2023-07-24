@@ -145,6 +145,7 @@ public class CartController implements Initializable {
         // each doc contains a item
         System.out.println("carrito_doc: " + carrito_doc);
         List<Cart_Item> ls = new ArrayList<>();
+<<<<<<< HEAD
         for (Document document : carrito_doc) {
             System.out.println(document);
             Map<String, Object> order = new HashMap<>();
@@ -178,9 +179,7 @@ public class CartController implements Initializable {
   */      }
 
 
-        //productos en el carrito
-
-
+ 
 
         return ls;
 
@@ -213,7 +212,7 @@ public class CartController implements Initializable {
     @FXML
     void onEmpezarButtonClick_profile(ActionEvent event) {
         try {
-            // Cargar el archivo FXML de la vista siguiente
+            // Cargar el archivo FXML de la vista siguientee
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
             Parent root = loader.load();
 
