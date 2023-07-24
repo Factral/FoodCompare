@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: eca702;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="335.0" style="-fx-background-color: eca702;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodcompare_vm.UserController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="43.0" prefWidth="335.0" style="-fx-background-color: f2f2f2;" BorderPane.alignment="CENTER">
          <children>

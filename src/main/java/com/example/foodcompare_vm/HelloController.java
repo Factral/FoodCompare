@@ -30,6 +30,8 @@ public class HelloController implements Initializable {
     @FXML
     private HBox cardLayoout_2;
     private List<Food> recentlyAdded;
+    @FXML
+    private Button user;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -189,20 +191,11 @@ public class HelloController implements Initializable {
         // Por ejemplo, cargar la nueva vista y mostrarla en una nueva ventana.
 
         try {
-            // Cargar el archivo FXML de la nueva vista
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("Usuario.fxml"));
-            Parent root = fxmlLoader.load();
-
-            // Crear una nueva escena y mostrarla en una nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
+            Parent root = loader.load();
             Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            Stage stage = (Stage) user.getScene().getWindow();
             stage.setScene(scene);
-            stage.setTitle("Nueva Vista");
-            stage.show();
-
-            // Opcional: cerrar la ventana actual si es necesario
-            // ((Stage) myButton.getScene().getWindow()).close();
         } catch (IOException e) {
             e.printStackTrace();
         }
