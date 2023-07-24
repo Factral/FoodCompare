@@ -21,7 +21,7 @@
                <children>
                   <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
                      <graphic>
-                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/home.png" />
                            </image>
@@ -35,11 +35,11 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: f2f2f2;">
+                  <Button fx:id="cart" mnemonicParsing="false" onAction="#handleButtonClick_cart" style="-fx-background-color: f2f2f2;">
                      <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/heart.png" />
+                              <Image url="@../img/cart.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -51,7 +51,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="user" mnemonicParsing="false" onAction="#handleButtonClick" style="-fx-background-color: f2f2f2;">
+                  <Button fx:id="user" mnemonicParsing="false" onAction="#handleButtonClick_profile" style="-fx-background-color: f2f2f2;">
                      <graphic>
                         <ImageView fitHeight="47.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -134,16 +134,6 @@
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
-                                 <graphic>
-                                    <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../img/cart.png" />
-                                       </image>
-                                       <cursor>
-                                          <Cursor fx:constant="DEFAULT" />
-                                       </cursor>
-                                    </ImageView>
-                                 </graphic>
                               </Button>
                            </children>
                            <opaqueInsets>
