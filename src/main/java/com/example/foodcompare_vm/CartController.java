@@ -198,6 +198,14 @@ public class CartController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Usuario.fxml"));
             Parent root = loader.load();
 
+
+            CConnection cConnection = new CConnection();
+            cConnection.connect();
+            //delete all documents in carrito collection
+            MongoCollection<Document> carrito_collection = cConnection.getCollection("carrito");
+            carrito_collection.deleteMany(new Document());
+
+
             // Obtener el controlador de la vista siguiente (si es necesario)
             // Por ejemplo, si tienes un controlador para la vista siguiente, puedes obtenerlo así:
             // VistaSiguienteController siguienteController = loader.getController();
