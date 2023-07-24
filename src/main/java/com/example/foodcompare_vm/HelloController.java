@@ -3,11 +3,16 @@ package com.example.foodcompare_vm;
 import com.example.model.Food;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import org.bson.Document;
 
 import java.io.IOException;
@@ -24,7 +29,6 @@ public class HelloController implements Initializable {
     private HBox cardLayoout_1;
     @FXML
     private HBox cardLayoout_2;
-
     private List<Food> recentlyAdded;
 
     @Override
@@ -178,4 +182,6 @@ public class HelloController implements Initializable {
 
         return ls;
     }
+
+
 }
