@@ -148,7 +148,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label fx:id="itemName" prefHeight="48.0" prefWidth="169.0" text="BIG MAC">
+                        <Label fx:id="itemName" alignment="CENTER" prefHeight="48.0" prefWidth="320.0" text="BIG MAC" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Berlin Sans FB" size="43.0" />
                            </font>
