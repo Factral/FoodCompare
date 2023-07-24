@@ -40,7 +40,7 @@
    <top>
       <VBox alignment="CENTER" prefHeight="277.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="297.0" style="-fx-background-color: eca702;">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="297.0" spacing="5.0" style="-fx-background-color: eca702;">
                <children>
                   <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="80.0" style="-fx-background-radius: 50%; -fx-background-color: ffff;">
                      <VBox.margin>
@@ -54,6 +54,7 @@
                         </ImageView>
                      </children>
                   </StackPane>
+                  <Label text="VERSION 1.0.0.0" textFill="WHITE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="127.0" prefWidth="335.0" style="-fx-padding: 10;">
